@@ -1,0 +1,12 @@
+<div id="inputFlow">
+    <ul>
+        <li v-for="(index1, item1) in items" v-on:click="doSth(index1)">
+            {{ item1.upper }}
+            <ul>
+                <li v-for="(index2,item2) in item1.lower" v-on:click='doSth(index2)'>
+                    {{item2}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

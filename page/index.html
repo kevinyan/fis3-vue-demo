@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>手机充值</title>
+    <link rel="stylesheet" href="../static/style/index.less">
+</head>
+
+<body>
+    <div id="header">
+        <my-header></my-header>
+    </div>
+    <div id="content" transition="expand">
+        <a v-on:click="goR('bill')">充话费</a>
+        <a v-on:click="goR('flow')">充流量</a>
+        <br>
+        <input type="text" v-model="inputer" placeholder="请输入手机号" v-on:keyup="onKeyup" />
+        <p>啊啊:{{inputer}}</p>
+        <!-- 路由外链 -->
+        <router-view></router-view>
+        <button v-on:click='beforeSubmit'>提交</button>
+    </div>
+    <div id="footer">
+        <my-footer></my-footer>
+    </div>
+</body>
+<script src="../static/lib/mod.js"></script>
+<script>
+require("../components/main/main.js");
+</script>
+
+</html>
